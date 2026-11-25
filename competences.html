@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compétences de El hadji Ousseynou Tamba en HTML, CSS, JavaScript et Git.">
+    <title>Compétences | El hadji Ousseynou Tamba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- EN-TÊTE : logo + menu de navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+            <a href="index.html" class="logo" aria-label="Retour à l'accueil">TEO<span>.</span></a>
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menu-principal">
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="competences.html" class="actif" aria-current="page">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BANNIÈRE DE PAGE : titre + bouton retour à l'accueil -->
+        <section class="page-hero">
+            <div class="container">
+                <a href="index.html" class="btn-retour">
+                    <span aria-hidden="true">&larr;</span> Retour à l'accueil
+                </a>
+                <h1>Mes compétences</h1>
+                <p>Technologies maîtrisées et connaissances en cours d'apprentissage.</p>
+            </div>
+        </section>
+
+        <!-- SECTION : cartes de compétences et étiquettes -->
+        <section class="section">
+            <div class="container">
+                <div class="grille-competences">
+                    <article class="carte-competence">
+                        <div class="competence-icone">&lt;/&gt;</div>
+                        <h3>HTML5 &amp; CSS3</h3>
+                        <p>Intégration de maquettes, layouts responsives et animations.</p>
+                        <div class="barre" role="img" aria-label="Niveau avancé">
+                            <span style="--niveau: 90%"></span>
+                        </div>
+                    </article>
+                    <article class="carte-competence">
+                        <div class="competence-icone">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>En apprentissage : bases du langage et premières interactions avec le DOM.</p>
+                        <div class="barre" role="img" aria-label="Niveau en apprentissage">
+                            <span style="--niveau: 30%"></span>
+                        </div>
+                    </article>
+                    <article class="carte-competence">
+                        <div class="competence-icone">Git</div>
+                        <h3>Git &amp; GitHub</h3>
+                        <p>En apprentissage : versionnage et gestion de dépôts.</p>
+                        <div class="barre" role="img" aria-label="Niveau en apprentissage">
+                            <span style="--niveau: 20%"></span>
+                        </div>
+                    </article>
+                </div>
+
+                <header class="section-header section-header-interne">
+                    <h2>Qualités &amp; centres d'intérêt</h2>
+                </header>
+                <div class="tags">
+                    <span class="tag">Rigoureux</span>
+                    <span class="tag">Curieux</span>
+                    <span class="tag">Autonome</span>
+                    <span class="tag">Travail en équipe</span>
+                    <span class="tag">Jeux vidéos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : lien vers les projets -->
+        <section class="section section-clair">
+            <div class="container section-contact">
+                <h2>Mes réalisations</h2>
+                <p class="contact-intro">Découvrez comment j'applique ces compétences sur des projets concrets.</p>
+                <a href="projets.html" class="btn btn-primaire">Voir mes projets</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 TEO. Tous droits réservés.</p>
+            <p>Conçu avec passion à Mbour.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT : ouverture / fermeture du menu sur mobile -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggle.addEventListener('click', () => {
+            const ouvert = menu.classList.toggle('ouvert');
+            toggle.setAttribute('aria-expanded', ouvert);
+        });
+        menu.querySelectorAll('a').forEach(lien => {
+            lien.addEventListener('click', () => {
+                menu.classList.remove('ouvert');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

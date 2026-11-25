@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez El hadji Ousseynou Tamba, développeur web full-stack à Mbour.">
+    <title>Contact | El hadji Ousseynou Tamba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- EN-TÊTE : logo + menu de navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+            <a href="index.html" class="logo" aria-label="Retour à l'accueil">TEO<span>.</span></a>
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menu-principal">
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="contact.html" class="actif" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BANNIÈRE DE PAGE : titre + bouton retour à l'accueil -->
+        <section class="page-hero">
+            <div class="container">
+                <a href="index.html" class="btn-retour">
+                    <span aria-hidden="true">&larr;</span> Retour à l'accueil
+                </a>
+                <span class="section-numero">05 / 05</span>
+                <h1>Contact</h1>
+                <p>Un projet, une question ou juste envie d'échanger ?</p>
+            </div>
+        </section>
+
+        <!-- SECTION : cartes email, GitHub et LinkedIn -->
+        <section class="section">
+            <div class="container">
+                <p class="contact-intro">Je serai ravi de discuter de votre projet ou de votre équipe. Voici comment me joindre :</p>
+                <div class="grille-contact">
+                    <a class="carte-contact" href="mailto:tambaousseynou337@gmail.com">
+                        <span class="contact-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </span>
+                        <span><strong>Email</strong><small>tambaousseynou337@gmail.com</small></span>
+                    </a>
+                    <a class="carte-contact" href="https://github.com/weuz" target="_blank" rel="noopener noreferrer">
+                        <span class="contact-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 22 12A10 10 0 0 0 12 2z"/></svg>
+                        </span>
+                        <span><strong>GitHub</strong><small>github.com/weuz</small></span>
+                    </a>
+                    <a class="carte-contact" href="https://www.linkedin.com/in/weuz" target="_blank" rel="noopener noreferrer">
+                        <span class="contact-icone" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                        </span>
+                        <span><strong>LinkedIn</strong><small>linkedin.com/in/weuz</small></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 TEO. Tous droits réservés.</p>
+            <p>Conçu avec passion à Mbour.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT : ouverture / fermeture du menu sur mobile -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggle.addEventListener('click', () => {
+            const ouvert = menu.classList.toggle('ouvert');
+            toggle.setAttribute('aria-expanded', ouvert);
+        });
+        menu.querySelectorAll('a').forEach(lien => {
+            lien.addEventListener('click', () => {
+                menu.classList.remove('ouvert');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de El hadji Ousseynou Tamba, développeur web full-stack basé à Mbour. Découvrez mon parcours, mes compétences et mes projets.">
+    <title>El hadji Ousseynou Tamba | Développeur Web Full-Stack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- EN-TÊTE : logo + menu de navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+            <a href="index.html" class="logo" aria-label="Retour à l'accueil">TEO<span>.</span></a>
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menu-principal">
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BANNIÈRE D'ACCUEIL : nom, métier, boutons et photo -->
+        <section class="hero" id="accueil">
+            <div class="container hero-content">
+                <div class="hero-texte">
+                    <p class="salutation">Bonjour, je suis</p>
+                    <h1>El hadji Ousseynou <span>Tamba</span></h1>
+                    <h2>Développeur Web Full-Stack</h2>
+                    <p class="hero-intro">
+                        Je crée des interfaces web modernes, accessibles et responsives.
+                        Passionné par le code et l'apprentissage continu, je donne vie
+                        à des projets concrets qui allient design et technique.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="projets.html" class="btn btn-primaire">Voir mes projets</a>
+                        <a href="contact.html" class="btn btn-secondaire">Me contacter</a>
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    <div class="avatar">
+                        <img src="image/portrait.jpeg" alt="Portrait de El hadji Ousseynou Tamba">
+                        <div class="avatar-ring" aria-hidden="true"></div>
+                    </div>
+                    <p class="localisation">
+                        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+                        Mbour, Sénégal
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : présentation -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>À propos de moi</h2>
+                </header>
+                <div class="carte carte-apropos">
+                    <p>
+                        Passionné par le développement web depuis quelques mois, j'ai découvert
+                        le code grâce à des tutoriels en ligne. Curieux et motivé, j'aime
+                        apprendre de nouvelles technologies et relever de nouveaux défis.
+                    </p>
+                    <p>
+                        Actuellement en formation pour devenir développeur full-stack,
+                        mon objectif est de créer des sites modernes et accessibles.
+                        En dehors du code, j'aime les jeux vidéos et le travail en équipe.
+                        Je cherche aujourd'hui à rejoindre des projets concrets où je
+                        pourrai contribuer et progresser.
+                    </p>
+                    <a href="apropos.html" class="lien-section">En savoir plus <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : compétences (barres de niveau) -->
+        <section class="section section-clair">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Mes compétences</h2>
+                </header>
+                <div class="grille-competences">
+                    <article class="carte-competence">
+                        <div class="competence-icone">&lt;/&gt;</div>
+                        <h3>HTML5 &amp; CSS3</h3>
+                        <p>Intégration de maquettes, layouts responsives et animations.</p>
+                        <div class="barre" role="img" aria-label="Niveau avancé">
+                            <span style="--niveau: 90%"></span>
+                        </div>
+                    </article>
+                    <article class="carte-competence">
+                        <div class="competence-icone">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>En apprentissage : bases du langage et premières interactions avec le DOM.</p>
+                        <div class="barre" role="img" aria-label="Niveau en apprentissage">
+                            <span style="--niveau: 30%"></span>
+                        </div>
+                    </article>
+                    <article class="carte-competence">
+                        <div class="competence-icone">Git</div>
+                        <h3>Git &amp; GitHub</h3>
+                        <p>En apprentissage : versionnage et gestion de dépôts.</p>
+                        <div class="barre" role="img" aria-label="Niveau en apprentissage">
+                            <span style="--niveau: 20%"></span>
+                        </div>
+                    </article>
+                </div>
+                <a href="competences.html" class="lien-section">Toutes mes compétences <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </section>
+
+        <!-- SECTION : aperçu des projets -->
+        <section class="section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Mes projets</h2>
+                </header>
+                <div class="carte carte-apropos">
+                    <p><strong>Journée de don et de partage</strong> &mdash; une page de présentation réalisée en HTML5 et CSS3.</p>
+                    <a href="projets.html" class="lien-section">Découvrir mes projets <span aria-hidden="true">&rarr;</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : formation et objectif professionnel -->
+        <section class="section section-clair">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Formation &amp; objectif</h2>
+                </header>
+                <div class="carte carte-formation">
+                    <div class="formation-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Développement Web HTML/CSS</h3>
+                        <p class="etablissement">UN-CHK</p>
+                        <p class="annee">2026</p>
+                    </div>
+                </div>
+                <div class="carte objectif">
+                    <span class="objectif-label">Mon objectif</span>
+                    <p>Devenir développeur full-stack et intégrer une équipe dynamique.</p>
+                </div>
+                <a href="formation.html" class="lien-section">Voir ma formation <span aria-hidden="true">&rarr;</span></a>
+            </div>
+        </section>
+
+        <!-- SECTION : appel au contact -->
+        <section class="section">
+            <div class="container section-contact">
+                <header class="section-header">
+                    <h2>Contact</h2>
+                </header>
+                <p class="contact-intro">Un projet, une question ou juste envie d'échanger ? N'hésitez pas à me contacter.</p>
+                <a href="contact.html" class="btn btn-primaire">Me contacter</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 TEO. Tous droits réservés.</p>
+            <p>Conçu avec passion à Mbour.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT : ouverture / fermeture du menu sur mobile -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggle.addEventListener('click', () => {
+            const ouvert = menu.classList.toggle('ouvert');
+            toggle.setAttribute('aria-expanded', ouvert);
+        });
+        menu.querySelectorAll('a').forEach(lien => {
+            lien.addEventListener('click', () => {
+                menu.classList.remove('ouvert');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets web réalisés par El hadji Ousseynou Tamba.">
+    <title>Projets | El hadji Ousseynou Tamba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- EN-TÊTE : logo + menu de navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+            <a href="index.html" class="logo" aria-label="Retour à l'accueil">TEO<span>.</span></a>
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menu-principal">
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html" class="actif" aria-current="page">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BANNIÈRE DE PAGE : titre + bouton retour à l'accueil -->
+        <section class="page-hero">
+            <div class="container">
+                <a href="index.html" class="btn-retour">
+                    <span aria-hidden="true">&larr;</span> Retour à l'accueil
+                </a>
+                <span class="section-numero">03 / 05</span>
+                <h1>Mes projets</h1>
+                <p>Une sélection de ce que j'ai construit, de la maquette à la mise en ligne.</p>
+            </div>
+        </section>
+
+        <!-- SECTION : cartes projets (aperçu + lien externe) -->
+        <section class="section">
+            <div class="container">
+                <div class="grille-projets">
+                    <article class="carte carte-projet">
+                        <div class="projet-visuel">
+                            <img src="image/projet-don.jpeg" alt="Aperçu du site Journée de don et de partage">
+                        </div>
+                        <div class="projet-corps">
+                            <span class="projet-tag">Projet 01 &middot; HTML5 &amp; CSS3</span>
+                            <h3>Journée de don et de partage</h3>
+                            <p>Une page de présentation pour une journée de don et de partage, réalisée en HTML5 et CSS3.</p>
+                            <a href="https://journee-de-don-et-de-partage.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-secondaire">Voir le projet <span aria-hidden="true">&nearr;</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : appel au contact -->
+        <section class="section section-clair">
+            <div class="container section-contact">
+                <h2>Un projet en tête ?</h2>
+                <p class="contact-intro">Je suis disponible pour collaborer et donner vie à de nouvelles idées.</p>
+                <a href="contact.html" class="btn btn-primaire">Me contacter</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 TEO. Tous droits réservés.</p>
+            <p>Conçu avec passion à Mbour.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT : ouverture / fermeture du menu sur mobile -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggle.addEventListener('click', () => {
+            const ouvert = menu.classList.toggle('ouvert');
+            toggle.setAttribute('aria-expanded', ouvert);
+        });
+        menu.querySelectorAll('a').forEach(lien => {
+            lien.addEventListener('click', () => {
+                menu.classList.remove('ouvert');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>

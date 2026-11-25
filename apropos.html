@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez qui est El hadji Ousseynou Tamba, développeur web full-stack à Mbour.">
+    <title>À propos | El hadji Ousseynou Tamba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- EN-TÊTE : logo + menu de navigation -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+            <a href="index.html" class="logo" aria-label="Retour à l'accueil">TEO<span>.</span></a>
+            <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-principal">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="menu" id="menu-principal">
+                <li><a href="apropos.html" class="actif" aria-current="page">À propos</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="formation.html">Formation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- BANNIÈRE DE PAGE : titre + bouton retour à l'accueil -->
+        <section class="page-hero">
+            <div class="container">
+                <a href="index.html" class="btn-retour">
+                    <span aria-hidden="true">&larr;</span> Retour à l'accueil
+                </a>
+                <h1>À propos de moi</h1>
+                <p>Qui je suis, mon parcours et ce qui me motive.</p>
+            </div>
+        </section>
+
+        <!-- SECTION : présentation, informations et qualités -->
+        <section class="section">
+            <div class="container">
+                <div class="carte carte-apropos">
+                    <p>
+                        Passionné par le développement web depuis quelques mois, j'ai découvert
+                        le code grâce à des tutoriels en ligne. Curieux et motivé, j'aime
+                        apprendre de nouvelles technologies et relever de nouveaux défis.
+                    </p>
+                    <p>
+                        Actuellement en formation pour devenir développeur full-stack,
+                        mon objectif est de créer des sites modernes et accessibles.
+                        En dehors du code, j'aime les jeux vidéos et le travail en équipe.
+                        Je cherche aujourd'hui à rejoindre des projets concrets où je
+                        pourrai contribuer et progresser.
+                    </p>
+                    <ul class="faits">
+                        <li><strong>Nom</strong> El hadji Ousseynou Tamba</li>
+                        <li><strong>Ville</strong> Mbour</li>
+                        <li><strong>Domaine</strong> Développement Web</li>
+                    </ul>
+                </div>
+
+                <header class="section-header section-header-interne">
+                    <h2>Mes qualités</h2>
+                </header>
+                <div class="tags">
+                    <span class="tag">Rigoureux</span>
+                    <span class="tag">Curieux</span>
+                    <span class="tag">Autonome</span>
+                    <span class="tag">Travail en équipe</span>
+                    <span class="tag">Jeux vidéos</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION : appel au contact -->
+        <section class="section section-clair">
+            <div class="container section-contact">
+                <h2>Envie d'en savoir plus ?</h2>
+                <p class="contact-intro">Parlons de votre projet ou de votre équipe.</p>
+                <a href="contact.html" class="btn btn-primaire">Me contacter</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 TEO. Tous droits réservés.</p>
+            <p>Conçu avec passion à Mbour.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT : ouverture / fermeture du menu sur mobile -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+        toggle.addEventListener('click', () => {
+            const ouvert = menu.classList.toggle('ouvert');
+            toggle.setAttribute('aria-expanded', ouvert);
+        });
+        menu.querySelectorAll('a').forEach(lien => {
+            lien.addEventListener('click', () => {
+                menu.classList.remove('ouvert');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+</body>
+</html>
