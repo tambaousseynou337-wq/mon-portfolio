@@ -499,6 +499,13 @@ a:hover {
     font-weight: 800;
     font-size: 1rem;
     margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.competence-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .carte-competence h3 {
@@ -611,6 +618,7 @@ a:hover {
 .projet-visuel img {
    width: 100%;
   height: 100%;
+  border-radius: 5px;
   object-fit: cover;
   object-position: top center;
   display: block;
