@@ -584,15 +584,16 @@ a:hover {
 
 /* ---------- Projets : cartes avec aperçu ---------- */
 .grille-projets {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 320px));
+  gap: 24px;
+  justify-content: start;
 }
 
 .carte-projet {
-    overflow: hidden;
-    padding: 0;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
 }
 
 .carte-projet:hover {
@@ -601,17 +602,25 @@ a:hover {
 }
 
 .projet-visuel {
-    background: var(--primaire-pale);
+     width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--primaire-pale);
 }
 
 .projet-visuel img {
-    width: 100%;
-    height: auto;
-    display: block;
+   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
 }
 
 .projet-corps {
-    padding: 26px;
+    display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
 }
 
 .projet-tag {
@@ -634,7 +643,8 @@ a:hover {
 }
 
 .projet-corps .btn {
-    margin-top: 22px;
+   margin-top: auto;        
+  align-self: flex-start;
 }
 
 /* ---------- Bloc objectif ---------- */
